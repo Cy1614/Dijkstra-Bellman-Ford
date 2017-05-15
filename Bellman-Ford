@@ -2,6 +2,9 @@ import numpy as np
 import scipy as sp
 import sys
 
+# Bellman-Ford algorithm's running time is approximately exp(O(n)) times Dijkstra's runtime but the advantage of this
+# algorithm is that it can deal with graphs with negative weights
+
 def BellmanFord(ist,isp,wei):
     #----------------------------------
     #  ist:    index of starting node
@@ -48,16 +51,17 @@ def BellmanFord(ist,isp,wei):
 
 
 if __name__ == '__main__':
-
+    
     # indices of starting and stopping vertices
     ist = 4
     isp = 3
 
     # randomly generated adjacency matrix 
-    #N   = 10
-    #ma  = np.around(np.random.uniform(0,1.2,(N,N)))
-    #wei = ma*np.random.uniform(0,30,(N,N))
-    #wei = np.tril(wei,-1) + np.triu(wei,1)
+    # N   = 10
+    # ma  = np.around(np.random.uniform(0,1.2,(N,N)))
+    # wei = ma*np.random.uniform(0,30,(N,N))
+    # wei = np.tril(wei,-1) + np.triu(wei,1) 
+    # np.tril/triu generates lower/upper triangle of an array
 
     # adjacency matrix
     wei = np.array([[ 0, 20,  0, 80, 0,  0, 90,  0],
