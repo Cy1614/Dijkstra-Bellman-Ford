@@ -1,5 +1,6 @@
 def calcWei(RX,RY,RA,RB,RV):
-    # calculate the weight matrix between the points
+    # calculate the weight matrix between the vertices using information of the coordinates of the vertices and some other
+    # relevant factors, in this case, speed
 
     n    = len(RX)
     wei = np.zeros((n,n),dtype=float)
